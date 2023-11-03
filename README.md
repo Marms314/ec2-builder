@@ -1,14 +1,6 @@
-# Welcome to your CDK TypeScript project
+This project builds an AWS EC2 with the tools to use the Envoy Proxy sandboxes preloaded.
+https://www.envoyproxy.io/docs/envoy/latest/start/sandboxes/
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
-
-## Useful commands
-
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `cdk deploy`      deploy this stack to your default AWS account/region
-* `cdk diff`        compare deployed stack with current state
-* `cdk synth`       emits the synthesized CloudFormation template
+Before deploying this project, create a keypair in AWS and identify your IP.
+Then go to lib\ec2-builder-stack.ts and add those values to lines 10 and 11.
+Then once the project is deployed, you can SSH into the EC2 instance and jump right into the sandboxes by navigating to envoy/examples.
